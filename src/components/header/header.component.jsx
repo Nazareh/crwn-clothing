@@ -1,19 +1,20 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { ReactComponent as Logo } from '../../assets/crown.svg';
-import { auth } from '../../firebase/firebase.utils';
+import {Link} from 'react-router-dom';
+import {ReactComponent as Logo} from '../../assets/crown.svg';
+import {auth} from '../../firebase/firebase.utils';
 
 import './header.styles.scss';
 
-const Header = ({ currentUser }) => (
+const Header = ({currentUser}) => (
     <div className='header'>
         <Link className='logo-container' to='/'>
-            <Logo className='logo' />
+            <Logo className='logo'/>
         </Link>
         <div className='options'>
             <Link to='/shop' className='option'>SHOP NOW</Link>
             <Link to='/' className='option'>CONTACT</Link>
-            {currentUser ? <div className='option' onClick= {()=> auth.signOut()}> SIGN OUT </div> : < Link to='/signIn' className='option'> SIGN IN</Link>}
+            {currentUser ? <div className='option' onClick={() => auth.signOut()}> SIGN OUT </div> :
+                < Link to='/signIn' className='option'> SIGN IN</Link>}
         </div>
     </div>
 );

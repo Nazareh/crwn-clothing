@@ -10,16 +10,16 @@ const firebaseConfig = {
     storageBucket: "crwn-db-bbb86.appspot.com",
     messagingSenderId: "911526392529",
     appId: "1:911526392529:web:77fce624d0a0e987bb4bf0"
-  };
+};
 
-  firebase.initializeApp(firebaseConfig);
+firebase.initializeApp(firebaseConfig);
 
-  export const auth = firebase.auth();
-  export const firestore = firebase.firestore();
+export const auth = firebase.auth();
+export const firestore = firebase.firestore();
 
-  const provider = new firebase.auth.GoogleAuthProvider();
-  provider.setCustomParameters({ prompt: 'select_account'});
-  
-  export const signInWithGoogle = () => auth.signInWithPopup(provider);
+const provider = new firebase.auth.GoogleAuthProvider();
+provider.setCustomParameters({prompt: 'select_account'});
 
-  export default firebase;
+export const signInWithGoogle = () => auth.signInWithPopup(provider);
+
+export default firebase;
