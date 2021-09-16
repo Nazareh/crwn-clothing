@@ -33,7 +33,7 @@ export const createUserProfileDocument = async(userAuth, additionalData) => {
           console.log(`error creating user ${userAuth.uid}`, e.message());
       }
     }
-    return snapShot;
+    return userRef;
 }
 
 if (firebase.apps.length === 0) {
