@@ -18,7 +18,7 @@ class SignIn extends React.Component {
     event.preventDefault();
 
     const { email, password } = this.state;
-    
+
     try {
       await auth.signInWithEmailAndPassword(email, password);
     } catch (error) {
@@ -58,8 +58,11 @@ class SignIn extends React.Component {
           />
           <div className="buttons">
             <CustomButton type="submit"> Sign in </CustomButton>
-            <CustomButton onClick={signInWithGoogle} isGoogleSignIn>
-              {" "}
+            <CustomButton
+              type="button"
+              onClick={signInWithGoogle}
+              isGoogleSignIn
+            >
               Sign in with Google{" "}
             </CustomButton>
           </div>
