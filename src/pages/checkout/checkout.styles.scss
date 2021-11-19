@@ -1,5 +1,4 @@
-.checkout-page{
-
+.checkout-page {
     width: 55%;
     min-height: 90vh;
     display: flex;
@@ -7,20 +6,20 @@
     align-items: center;
     margin: 50px auto 0;
 
-    .checkout-header{
+    .checkout-header {
         width: 100%;
-        height: 40px;
+        padding: 10px 0;
         display: flex;
         justify-content: space-between;
-        border-bottom: 1px solid darkgray;
+        border-bottom: 1px solid darkgrey;
 
-        .header-block{
+        .header-block {
             text-transform: capitalize;
             width: 23%;
-        }
 
-        &.last-child{
-            width: 8%;
+            &:last-child {
+                width: 8%;
+            }
         }
     }
 
@@ -28,5 +27,5 @@
         margin-top: 30px;
         margin-left: auto;
         font-size: 36px;
-      }
+    }
 }
